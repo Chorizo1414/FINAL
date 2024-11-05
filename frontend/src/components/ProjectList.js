@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import apiUrl from '../apiConfig';
 import { useNavigate } from 'react-router-dom';
 import './ProjectList.css';
 
@@ -10,7 +11,7 @@ const ProjectList = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/projects/all-projects');
+        const response = await axios.get('${apiUrl}/api/projects/all-projects');
         setProjects(response.data);
       } catch (error) {
         console.error('Error al obtener los proyectos:', error);

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import axios from 'axios';
+import apiUrl from '../apiConfig';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './CheckoutForm.css';
 
@@ -29,7 +30,7 @@ const CheckoutForm = () => {
   useEffect(() => {
     const createPaymentIntent = async () => {
       try {
-        const response = await axios.post('http://localhost:5000/create-payment-intent', {
+        const response = await axios.post('${apiUrl}/create-payment-intent', {
           amount: project.costo_proyecto * 100, // Convertir a centavos
         });
         setClientSecret(response.data.clientSecret);

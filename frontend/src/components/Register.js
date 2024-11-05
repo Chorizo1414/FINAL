@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Asegúrate de tener axios instalado
+import axios from 'axios';
+import apiUrl from '../apiConfig';
 import './Login.css';
 
 const Register = () => {
@@ -13,7 +14,7 @@ const Register = () => {
 
     try {
 
-      const response = await axios.post('http://localhost:5000/register', {
+      const response = await axios.post('${apiUrl}/register', {
         username,
         password
       }, {

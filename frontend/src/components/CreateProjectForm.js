@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import apiUrl from '../apiConfig';
 import { useNavigate } from 'react-router-dom';
 import './CreateProjectForm.css';
 
@@ -27,7 +28,7 @@ const CreateProjectForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/projects/add-project', formData);
+      await axios.post('${apiUrl}/api/projects/add-project', formData);
       alert('Proyecto agregado exitosamente');
       navigate('/projects');
     } catch (error) {
