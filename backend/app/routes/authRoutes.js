@@ -5,7 +5,7 @@ const authController = require('../controllers/authController');
 
   router.get('/users', async (req, res) => {
     try {
-      const result = await pool.query('SELECT * FROM users'); // Asegúrate de que la tabla `users` existe
+      const result = await pool.query('SELECT * FROM users');
       res.json(result.rows);
     } catch (error) {
       console.error(error);
