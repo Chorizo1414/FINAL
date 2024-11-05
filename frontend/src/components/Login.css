@@ -1,0 +1,49 @@
+/* Login.css */
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 100px auto;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .login-input {
+    width: 90%; /* Reducir el ancho un poco */
+    padding: 8px; /* Reducir el relleno */
+    margin: 8px 0; /* Añadir margen vertical */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px; /* Reducir el tamaño de la fuente */
+  }
+  
+  .login-button {
+    width: 90%; /* Alinea el botón con los inputs */
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 12px; /* Añadir un poco de espacio antes del botón */
+  }
+  
+  .login-button:hover {
+    background-color: #45a049;
+  }
+  
+  .register-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+  }
+  
